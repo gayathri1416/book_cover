@@ -30,6 +30,23 @@ Publish the website in the LocalHost.
 
 # PROGRAM:
 ```
+    views.py :
+
+    from django.shortcuts import render
+def p8(request):
+    return render(request,'book.html')
+
+urls.py:
+
+from django.contrib import admin
+from django.urls import path
+from bookapp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.p8,name="cover"),
+]
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,6 +163,6 @@ Publish the website in the LocalHost.
 
 ```
 # OUTPUT:
-![alt text](front/bookapp/static/output.png)
+![alt text](<Screenshot 2025-10-05 110945.png>)
 # RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.

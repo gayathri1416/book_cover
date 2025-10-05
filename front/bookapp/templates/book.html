@@ -21,9 +21,9 @@
       height: 600px;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
       font-family: Arial, Helvetica, sans-serif;
       color: white;
+      box-shadow: 0px 0px 20px whitesmoke;
     }
 
     .book-cover >img {
@@ -94,7 +94,8 @@
 </head>
 <body>
   <div class="book-cover">
-    <img src="bg.jpg"alt="Book Background">
+    {% load static %}
+    <img src="{% static 'bg.jpg' %}"alt="Book Background">
     <div class="overlay"></div>
 
     <div class="insight">FUTURE WORLD</div>
@@ -105,7 +106,8 @@
     </div>
 
     <div class="author-details">
-      <img class="author-pic" src="author.jpg"Author Photo">
+      {% load static %}
+      <img src="{% static 'author.jpg' %}" alt="Author Photo" class="author-pic">
       <h5 class="author-name">By GAYATHRI.C</h5>
     </div>
   </div>

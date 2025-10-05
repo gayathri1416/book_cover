@@ -1,3 +1,3 @@
 from django.shortcuts import render
-
-# Create your views here.
+def p8(request):
+    return render(request,'book.html')
